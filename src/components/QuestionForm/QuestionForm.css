@@ -1,0 +1,53 @@
+
+
+.form-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form {
+    width: 70%;
+}
+
+.form-questions-container {
+    width: 100%;
+    border: 1px solid #d6d6d6;
+    border-radius: 8px;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 3rem;
+}
+
+.form-inputs {
+    padding: 1rem;
+    border: 1px solid #d6d6d6;
+    border-radius: 8px;
+    
+}
+
+.form-inputs::placeholder {
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-inputs:focus {
+    outline: none;
+    border: 1px solid #22cc0071 ;
+    border-radius: 8px;
+    transition: 0.1s ease-in;
+}
+
+
+
+.form-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.6rem;
+    text-align: center;
+    margin-top: 2rem;
+}
