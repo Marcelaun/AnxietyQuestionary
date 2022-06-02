@@ -1,5 +1,4 @@
 
-
 .form-main-container {
     display: flex;
     justify-content: center;
@@ -8,28 +7,123 @@
 }
 
 .form {
-    width: 70%;
+    width: 80%;
 }
 
 .form-questions-container {
-    width: 100%;
-    border: 1px solid #d6d6d6;
+    border: 1px solid #07cf007c;
     border-radius: 8px;
-    padding: 2rem;
+    padding: 3rem;
     font-family: 'Poppins', sans-serif;
-    font-size: 3.6rem;
+    font-size: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 
     margin-top: 3rem;
 }
 
+.optional-title {
+    color: #646464;
+}
+
+
+
+.question-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.res-container input, .res-container label {
+    cursor: pointer;
+}
+
+.res-container label {
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin: 0.2rem auto;
+    height: 2rem;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+    margin-left: 1.4rem;
+  
+}
+
+.check {
+  display: block;
+  position: relative;
+  border: 0.2rem solid #AAAAAA;
+  border-radius: 100%;
+  height: 1rem;
+  width: 1rem;
+  bottom: 2.6rem;
+  right: 1.8rem;
+  z-index: 5;
+  transition: border .25s linear;
+  -webkit-transition: border .25s linear;
+  margin-left: 1.4rem;
+}
+
+.check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 0.6rem;
+    width: 0.6rem;
+    top: 0.2rem;
+    left: 0.2rem;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+  }
+
+.res-container input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.res-container input[type="radio"]:checked ~ .check {
+    border-color: #01e47e;
+}
+
+.res-container input[type="radio"]:checked ~ .check::before{
+    background: #01e47e;
+}
+
+.res-container input[type="radio"]:checked ~ label {
+    color: #01e47e;
+}
+
+.res-container:hover label {
+    color: #5a5a5a;
+}
+
+.res-container:hover .check {
+    border-color: #5a5a5a;
+}
+
 .form-inputs {
-    padding: 1rem;
+    padding: 0.5rem;
     border: 1px solid #d6d6d6;
     border-radius: 8px;
     
+}
+
+.question-title {
+    font-weight: 700;
+    border-bottom: 2px solid #b6b6b6;
+    
+}
+
+.question-box {
+    margin-top: 2.4rem;
 }
 
 .form-inputs::placeholder {
@@ -47,7 +141,104 @@
 
 .form-title {
     font-family: 'Poppins', sans-serif;
-    font-size: 3.6rem;
+    font-size: 2rem;
     text-align: center;
     margin-top: 2rem;
+    color: #07cf007c;
+}
+
+.text-area-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text-area-container label {
+    color: #07a701;
+}
+
+.question-desc-area {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 4px;
+    resize: vertical;
+    height: 10rem;
+    
+}
+
+.question-desc-area:focus {
+    border-color: #07a701;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.submit-btn {
+    background: #07a701;
+    color: #fff;
+    padding: 0.8rem;
+    width: 25vw;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.submit-btn:hover {
+    opacity: 0.7;
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .form {
+        width: 90%;
+    }
+    
+    .question-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:425px) {
+
+    .res-container label {
+      display: block;
+      position: relative;
+      font-weight: 300;
+      font-size: 0.9rem;
+      padding: 0.2rem;
+      margin: 0.1rem auto;
+      height: 1rem;
+      z-index: 9;
+      cursor: pointer;
+      -webkit-transition: all 0.25s linear;
+      margin-left: 1.4rem;
+    }
+
+    .check {
+        height: 0.5rem;
+        width: 0.5rem;
+        bottom: 1.2rem;
+        right: 1.2rem;
+    }
+
+
+    .question-title {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .form-title {
+        font-size: 1.6rem;
+    }
+
+    .check::before {
+        top: 0.1rem;
+        left: 0.0925rem;
+        width: 0.3rem;
+        height: 0.3rem;
+    }
 }
